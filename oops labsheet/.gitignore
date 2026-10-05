@@ -1,0 +1,22 @@
+# Assignment source PDFs are kept locally but not committed.
+*.pdf
+
+# Java build output and packaged files.
+*.class
+out/
+build/
+target/
+*.jar
+*.war
+
+# IDE and operating-system files.
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Dependency folders used by other tools.
+node_modules/
+vendor/
+
