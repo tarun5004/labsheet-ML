@@ -1,0 +1,4 @@
+class MedicalStaff { protected int staffId; protected String staffName; MedicalStaff(int staffId,String staffName){this.staffId=staffId;this.staffName=staffName;} }
+class Doctor extends MedicalStaff { private String specialization; Doctor(int id,String name,String specialization){super(id,name);this.specialization=specialization;} void displayDoctor(){System.out.println(staffId+" "+staffName+" "+specialization);} }
+class Pharmacist extends MedicalStaff { private String licenseNo; Pharmacist(int id,String name,String licenseNo){super(id,name);this.licenseNo=licenseNo;} void displayPharmacist(){System.out.println(staffId+" "+staffName+" "+licenseNo);} }
+public class Q16_MedicalStaffMain { public static void main(String[] a){new Doctor(1,"Asha","Heart").displayDoctor();new Pharmacist(2,"Kabir","LIC2").displayPharmacist();} }
