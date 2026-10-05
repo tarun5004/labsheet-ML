@@ -1,0 +1,6 @@
+class Person { protected String name; protected int age; Person(String name,int age){this.name=name;this.age=age;} }
+class Employee extends Person { private int employeeId; private double salary; static int employeeCount; Employee(String name,int age,int employeeId,double salary){super(name,age);this.employeeId=employeeId;this.salary=salary;employeeCount++;} int getEmployeeId(){return employeeId;} double getSalary(){return salary;} }
+class Doctor extends Employee { private String specialization; Doctor(String n,int a,int id,double s,String x){super(n,a,id,s);specialization=x;} void display(){System.out.println("Doctor "+name+" "+specialization);} }
+class Pharmacist extends Employee { private String licenseNo; Pharmacist(String n,int a,int id,double s,String x){super(n,a,id,s);licenseNo=x;} void display(){System.out.println("Pharmacist "+name+" "+licenseNo);} }
+class StaffManager { void display(Employee[] staff){for(Employee e:staff)if(e instanceof Doctor)((Doctor)e).display();else ((Pharmacist)e).display();} }
+public class Q19_HospitalStaffMain { public static void main(String[] a){Employee[] staff={new Doctor("Asha",35,1,70000,"Cardiology"),new Pharmacist("Kabir",30,2,50000,"LIC1")};new StaffManager().display(staff);System.out.println("Employees: "+Employee.employeeCount);} }

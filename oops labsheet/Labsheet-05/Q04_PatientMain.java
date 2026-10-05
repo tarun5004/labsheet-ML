@@ -1,0 +1,3 @@
+class Patient { int patientId,age; String patientName; Patient(int patientId,String patientName,int age){this.patientId=patientId;this.patientName=patientName;this.age=age;} void displayPatient(){System.out.println(patientId+" "+patientName+" "+age);} }
+class PatientManager { void displayAllPatients(Patient[] patients){for(int i=0;i<patients.length;i++)patients[i].displayPatient();} }
+public class Q04_PatientMain { public static void main(String[] a){Patient[] p={new Patient(1,"Asha",20),new Patient(2,"Ravi",31),new Patient(3,"Neha",25),new Patient(4,"Kabir",40),new Patient(5,"Isha",19)};new PatientManager().displayAllPatients(p);} }

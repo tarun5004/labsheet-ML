@@ -1,0 +1,2 @@
+class Medicine { String medicineName,batchNo; double price; Medicine(String medicineName,String batchNo,double price){this.medicineName=medicineName;this.batchNo=batchNo;this.price=price;} void displayMedicine(){System.out.println(medicineName+" "+batchNo+" "+price);} }
+public class Q02_MedicineMain { public static void main(String[] a){new Medicine("Cough Syrup","B101",120).displayMedicine();new Medicine("Tablet","B102",80).displayMedicine();} }
