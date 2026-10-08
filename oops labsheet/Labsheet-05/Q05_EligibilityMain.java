@@ -1,2 +1,13 @@
-class Medicine { String medicineName; int ageLimit; Medicine(String medicineName,int ageLimit){this.medicineName=medicineName;this.ageLimit=ageLimit;} String checkEligibility(int patientAge){String result;if(patientAge>=ageLimit)result="Eligible";else result="Not Eligible";return result;} }
-public class Q05_EligibilityMain { public static void main(String[] a){Medicine m=new Medicine("Adult Medicine",18);System.out.println(m.checkEligibility(20));System.out.println(m.checkEligibility(12));} }
+class Medicine { String medicineName; int ageLimit; Medicine(String medicineName,int ageLimit)
+    {this.medicineName=medicineName;this.ageLimit=ageLimit;} 
+    String checkEligibility(int patientAge)
+    {String result;if(patientAge>=ageLimit)result="Eligible";
+    else result="Not Eligible";return result;
+    } 
+}
+public class Q05_EligibilityMain { public static void main(String[] a)
+    {Medicine m=new Medicine("Adult Medicine",18);
+    System.out.println(m.checkEligibility(20));
+    System.out.println(m.checkEligibility(12));
+    } 
+}
